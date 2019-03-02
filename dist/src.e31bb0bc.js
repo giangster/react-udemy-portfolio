@@ -25552,21 +25552,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var PROJECTS = [{
   id: 1,
-  title: 'Example React Application',
-  description: 'A React App that I byult, involving JS and core web dev concepts!',
-  link: 'https://github.com/150Dkatz/example',
+  title: 'Porfolio Page',
+  description: 'My portfolio page',
+  link: 'https://github.com/thuygiang152/react-udemy-portfolio',
   image: _project.default
 }, {
   id: 2,
-  title: 'My API',
-  description: 'A REST API that I built from scratch with GET and POST requests!',
-  link: 'https://github.com/150Dkatz/example',
+  title: 'Confusion Restaurant',
+  description: 'A web app for restaurant',
+  link: 'https://github.com/thuygiang152/react-coursera-confusion',
   image: _project.default
 }, {
   id: 3,
-  title: 'Operating Systems Final Project',
-  description: 'My unique final project for my university Operating Systems course.',
-  link: 'https://github.com/150Dkatz/example',
+  title: 'My lifestyle',
+  description: 'A glance at my Instagram page',
+  link: 'https://instagram.com/koinehehe',
   image: _project.default
 }];
 var _default = PROJECTS;
@@ -25641,7 +25641,7 @@ function (_Component) {
       }), _react.default.createElement("p", null, description), _react.default.createElement("a", {
         href: link,
         style: {
-          fontSize: 15
+          fontSize: 12
         }
       }, link));
     }
@@ -25664,7 +25664,7 @@ function (_Component2) {
   _createClass(Projects, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Highlighted Projects (NOT my Projects hihi)"), _react.default.createElement("div", null, _project.default.map(function (project, index) {
+      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Highlighted Projects"), _react.default.createElement("div", null, _project.default.map(function (project, index) {
         return _react.default.createElement(Project, {
           key: index,
           project: project
@@ -26140,7 +26140,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49299" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60309" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

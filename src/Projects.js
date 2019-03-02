@@ -10,7 +10,7 @@ class Project extends Component {
                 <h3 >{title}</h3>
                 <img src={image} alt='profile' style={{ width: 200, height: 120 }} />
                 <p>{description}</p>
-                <a href={link} style={{ fontSize: 15 }}>{link}</a>
+                <a href={link} style={{ fontSize: 12 }}>{link}</a>
             </div >
         )
     }

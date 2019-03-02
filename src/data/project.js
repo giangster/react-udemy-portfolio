@@ -20,7 +20,7 @@ const PROJECTS = [
     {
         id: 3,
         title: 'My lifestyle',
-        description: 'A sneak peek at my Instagram page',
+        description: 'A glance at my Instagram page',
         link: 'https://instagram.com/koinehehe',
         image: project3
     }
