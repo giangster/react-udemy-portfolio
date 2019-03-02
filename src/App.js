@@ -24,6 +24,7 @@ class App extends Component {
                 <img src={koi} alt='Koi' className='profile' />
                 <h1>Hello!</h1>
                 <Title />
+
                 <p>My name is Giang, but you can call me Koi. And.. I'm a cat.</p>
                 {this.state.displayBio ? (<div>
                     <p>I'm 25 years old (but many people tell me I don't look like one.. or <i>behave</i> like one). Currently I'm living in Finland. I'm a student majoring in Business Information Technology at Haaga-Helia University of Applied Sciences. I'm learning React.js, JavaScript, CSS.</p>
