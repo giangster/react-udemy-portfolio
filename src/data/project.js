@@ -5,23 +5,23 @@ import project3 from '../assets/project1.png';
 const PROJECTS = [
     {
         id: 1,
-        title: 'Example React Application',
-        description: 'A React App that I byult, involving JS and core web dev concepts!',
-        link: 'https://github.com/150Dkatz/example',
+        title: 'Porfolio Page',
+        description: 'My portfolio page',
+        link: 'https://github.com/thuygiang152/react-udemy-portfolio',
         image: project1
     },
     {
         id: 2,
-        title: 'My API',
-        description: 'A REST API that I built from scratch with GET and POST requests!',
-        link: 'https://github.com/150Dkatz/example',
+        title: 'Confusion Restaurant',
+        description: 'A web app for restaurant',
+        link: 'https://github.com/thuygiang152/react-coursera-confusion',
         image: project2
     },
     {
         id: 3,
-        title: 'Operating Systems Final Project',
-        description: 'My unique final project for my university Operating Systems course.',
-        link: 'https://github.com/150Dkatz/example',
+        title: 'My lifestyle',
+        description: 'A sneak peek at my Instagram page',
+        link: 'https://instagram.com/koinehehe',
         image: project3
     }
 ];
