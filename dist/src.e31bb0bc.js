@@ -25537,7 +25537,7 @@ if ("development" === 'production') {
   module.exports = require('./cjs/react-dom.development.js');
 }
 },{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"assets/project1.png":[function(require,module,exports) {
-module.exports = "/project1.0e13da1c.png";
+module.exports = "/a0ccfacb187205c7f56af02d0e13da1c.png";
 },{}],"data/project.js":[function(require,module,exports) {
 "use strict";
 
@@ -25571,7 +25571,7 @@ var PROJECTS = [{
 }];
 var _default = PROJECTS;
 exports.default = _default;
-},{"../assets/project1.png":"assets/project1.png"}],"Projects.js":[function(require,module,exports) {
+},{"../assets/project1.png":"assets/project1.png"}],"components/Projects.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25581,104 +25581,52 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _project = _interopRequireDefault(require("./data/project"));
+var _project = _interopRequireDefault(require("../data/project"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-var Project =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Project, _Component);
-
-  function Project() {
-    _classCallCheck(this, Project);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Project).apply(this, arguments));
-  }
-
-  _createClass(Project, [{
-    key: "render",
-    value: function render() {
-      console.log('this.props', this.props);
-      var _this$props$project = this.props.project,
-          title = _this$props$project.title,
-          image = _this$props$project.image,
-          description = _this$props$project.description,
-          link = _this$props$project.link;
-      return _react.default.createElement("div", {
-        style: {
-          display: 'inline-block',
-          width: 300,
-          margin: 10
-        }
-      }, _react.default.createElement("h3", null, title), _react.default.createElement("img", {
-        src: image,
-        alt: "profile",
-        style: {
-          width: 200,
-          height: 120
-        }
-      }), _react.default.createElement("p", null, description), _react.default.createElement("a", {
-        href: link,
-        style: {
-          fontSize: 12
-        }
-      }, link));
+var Project = function Project(props) {
+  console.log('this.props', props);
+  var _props$project = props.project,
+      title = _props$project.title,
+      image = _props$project.image,
+      description = _props$project.description,
+      link = _props$project.link;
+  return _react.default.createElement("div", {
+    style: {
+      display: 'inline-block',
+      width: 300,
+      margin: 10
     }
-  }]);
-
-  return Project;
-}(_react.Component);
-
-var Projects =
-/*#__PURE__*/
-function (_Component2) {
-  _inherits(Projects, _Component2);
-
-  function Projects() {
-    _classCallCheck(this, Projects);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Projects).apply(this, arguments));
-  }
-
-  _createClass(Projects, [{
-    key: "render",
-    value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Highlighted Projects"), _react.default.createElement("div", null, _project.default.map(function (project, index) {
-        return _react.default.createElement(Project, {
-          key: index,
-          project: project
-        });
-      })));
+  }, _react.default.createElement("h3", null, title), _react.default.createElement("img", {
+    src: image,
+    alt: "profile",
+    style: {
+      width: 200,
+      height: 120
     }
-  }]);
+  }), _react.default.createElement("p", null, description), _react.default.createElement("a", {
+    href: link,
+    style: {
+      fontSize: 12
+    }
+  }, link));
+};
 
-  return Projects;
-}(_react.Component);
+var Projects = function Projects() {
+  return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Highlighted Projects"), _react.default.createElement("div", null, _project.default.map(function (project, index) {
+    return _react.default.createElement(Project, {
+      key: index,
+      project: project
+    });
+  })));
+};
 
 var _default = Projects;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./data/project":"data/project.js"}],"Title.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../data/project":"data/project.js"}],"components/Title.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25795,13 +25743,13 @@ function (_Component) {
 var _default = Title;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"assets/email_icon.png":[function(require,module,exports) {
-module.exports = "/email_icon.d6c23642.png";
+module.exports = "/e5887790da161f5211d6cc4ad6c23642.png";
 },{}],"assets/github_icon.png":[function(require,module,exports) {
-module.exports = "/github_icon.2b0f71f9.png";
+module.exports = "/b9ffeb2739f828d9d3bb0cb02b0f71f9.png";
 },{}],"assets/linkedin_icon.png":[function(require,module,exports) {
-module.exports = "/linkedin_icon.32d4c8f5.png";
+module.exports = "/0d9bf58b4445ccf9eb3ef01732d4c8f5.png";
 },{}],"assets/twitter_icon.png":[function(require,module,exports) {
-module.exports = "/twitter_icon.38592594.png";
+module.exports = "/9fe3c61be685f2956db6157138592594.png";
 },{}],"data/socialProfiles.js":[function(require,module,exports) {
 "use strict";
 
@@ -25839,7 +25787,7 @@ var SOCIAL_PROFILES = [{
 }];
 var _default = SOCIAL_PROFILES;
 exports.default = _default;
-},{"../assets/email_icon.png":"assets/email_icon.png","../assets/github_icon.png":"assets/github_icon.png","../assets/linkedin_icon.png":"assets/linkedin_icon.png","../assets/twitter_icon.png":"assets/twitter_icon.png"}],"SocialProfile.js":[function(require,module,exports) {
+},{"../assets/email_icon.png":"assets/email_icon.png","../assets/github_icon.png":"assets/github_icon.png","../assets/linkedin_icon.png":"assets/linkedin_icon.png","../assets/twitter_icon.png":"assets/twitter_icon.png"}],"components/SocialProfile.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25849,9 +25797,56 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _socialProfiles = _interopRequireDefault(require("./data/socialProfiles"));
+var _socialProfiles = _interopRequireDefault(require("../data/socialProfiles"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+var SocialProfile = function SocialProfile(props) {
+  var _props$socialProfile = props.socialProfile,
+      name = _props$socialProfile.name,
+      link = _props$socialProfile.link,
+      image = _props$socialProfile.image;
+  return _react.default.createElement("div", {
+    style: {
+      display: 'inline-block'
+    }
+  }, _react.default.createElement("a", {
+    href: link
+  }, _react.default.createElement("img", {
+    src: image,
+    alt: name,
+    style: {
+      width: 40,
+      height: 40,
+      margin: 10
+    }
+  })));
+};
+
+var SocialProfiles = function SocialProfiles(props) {
+  return _react.default.createElement("div", null, _react.default.createElement("h4", null, "Connect with me!"), _react.default.createElement("div", null, _socialProfiles.default.map(function (profile, index) {
+    return _react.default.createElement(SocialProfile, {
+      key: index,
+      socialProfile: profile
+    });
+  })));
+};
+
+var _default = SocialProfiles;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","../data/socialProfiles":"data/socialProfiles.js"}],"assets/koi.png":[function(require,module,exports) {
+module.exports = "/8850b9285ea32906a1f2a9fe459ab4f7.png";
+},{}],"components/Jokes.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
@@ -25865,84 +25860,91 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var SocialProfile =
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var Joke = function Joke(_ref) {
+  var joke = _ref.joke;
+  var setup = joke.setup,
+      punchline = joke.punchline;
+  return _react.default.createElement("p", null, setup, " ", _react.default.createElement("em", null, punchline));
+};
+
+var Jokes =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(SocialProfile, _Component);
+  _inherits(Jokes, _Component);
 
-  function SocialProfile() {
-    _classCallCheck(this, SocialProfile);
+  function Jokes() {
+    var _getPrototypeOf2;
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(SocialProfile).apply(this, arguments));
-  }
+    var _this;
 
-  _createClass(SocialProfile, [{
-    key: "render",
-    value: function render() {
-      var _this$props$socialPro = this.props.socialProfile,
-          name = _this$props$socialPro.name,
-          link = _this$props$socialPro.link,
-          image = _this$props$socialPro.image;
-      return _react.default.createElement("div", {
-        style: {
-          display: 'inline-block'
-        }
-      }, _react.default.createElement("a", {
-        href: link
-      }, _react.default.createElement("img", {
-        src: image,
-        alt: name,
-        style: {
-          width: 40,
-          height: 40,
-          margin: 10
-        }
-      })));
+    _classCallCheck(this, Jokes);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
-  }]);
 
-  return SocialProfile;
-}(_react.Component);
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Jokes)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-var SocialProfiles =
-/*#__PURE__*/
-function (_Component2) {
-  _inherits(SocialProfiles, _Component2);
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      joke: {},
+      jokes: []
+    });
 
-  function SocialProfiles() {
-    _classCallCheck(this, SocialProfiles);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(SocialProfiles).apply(this, arguments));
-  }
-
-  _createClass(SocialProfiles, [{
-    key: "render",
-    value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h4", null, "Connect with me!"), _react.default.createElement("div", null, _socialProfiles.default.map(function (profile, index) {
-        return _react.default.createElement(SocialProfile, {
-          key: index,
-          socialProfile: profile
+    _defineProperty(_assertThisInitialized(_this), "componentDidMount", function () {
+      fetch('https://official-joke-api.appspot.com/random_joke').then(function (response) {
+        return response.json();
+      }).then(function (response) {
+        return _this.setState({
+          joke: response
         });
-      })));
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "getJokes", function () {
+      fetch('https://official-joke-api.appspot.com/random_ten').then(function (response) {
+        return response.json();
+      }).then(function (response) {
+        return _this.setState({
+          jokes: response
+        });
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(Jokes, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", null, _react.default.createElement("h5", null, "Joke of the day"), _react.default.createElement(Joke, {
+        joke: this.state.joke
+      }), _react.default.createElement("button", {
+        onClick: this.getJokes
+      }, "More jokes!"), this.state.jokes.map(function (joke, index) {
+        return _react.default.createElement(Joke, {
+          key: index,
+          joke: joke
+        });
+      }));
     }
   }]);
 
-  return SocialProfiles;
+  return Jokes;
 }(_react.Component);
 
-var _default = SocialProfiles;
+var _default = Jokes;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./data/socialProfiles":"data/socialProfiles.js"}],"assets/koi.png":[function(require,module,exports) {
-module.exports = "/koi.459ab4f7.png";
-},{}],"App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25958,7 +25960,9 @@ var _Title = _interopRequireDefault(require("./Title"));
 
 var _SocialProfile = _interopRequireDefault(require("./SocialProfile"));
 
-var _koi = _interopRequireDefault(require("./assets/koi.png"));
+var _koi = _interopRequireDefault(require("../assets/koi.png"));
+
+var _Jokes = _interopRequireDefault(require("./Jokes"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26016,9 +26020,9 @@ function (_Component) {
         className: "profile"
       }), _react.default.createElement("h1", null, "Hello!"), _react.default.createElement(_Title.default, null), _react.default.createElement("p", null, "My name is Giang, but you can call me Koi. And.. I'm a cat."), this.state.displayBio ? _react.default.createElement("div", null, _react.default.createElement("p", null, "I'm 25 years old (but many people tell me I don't look like one.. or ", _react.default.createElement("i", null, "behave"), " like one). Currently I'm living in Finland. I'm a student majoring in Business Information Technology at Haaga-Helia University of Applied Sciences. I'm learning React.js, JavaScript, CSS."), _react.default.createElement("p", null, "I think it's safe to say I'm responsible and willing to learn. I'm also a good combination of sweet and sarcastic. And I ", _react.default.createElement("b", null, "love"), " cute socks."), _react.default.createElement("p", null, "In my free time I like to cook, read books, watch \"lame series\" from Netflix (as my sister would call it, but I think they are awesome..) and sleep. Sorry I'm a cat. You know they love sleeping."), _react.default.createElement("button", {
         onClick: this.toggleDisplayBio
-      }, "Show less")) : _react.default.createElement("div", null, _react.default.createElement("button", {
+      }, "Show less")) : _react.default.createElement("div", null, _react.default.createElement("h2", null, "Joke of the day"), _react.default.createElement("button", {
         onClick: this.toggleDisplayBio
-      }, "Read more")), _react.default.createElement("hr", null), _react.default.createElement(_Projects.default, null), _react.default.createElement(_SocialProfile.default, null));
+      }, "Read more")), _react.default.createElement("hr", null), _react.default.createElement(_Projects.default, null), _react.default.createElement(_SocialProfile.default, null), _react.default.createElement(_Jokes.default, null));
     }
   }]);
 
@@ -26027,7 +26031,7 @@ function (_Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Projects":"Projects.js","./Title":"Title.js","./SocialProfile":"SocialProfile.js","./assets/koi.png":"assets/koi.png"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./Title":"components/Title.js","./SocialProfile":"components/SocialProfile.js","../assets/koi.png":"assets/koi.png","./Jokes":"components/Jokes.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -26106,14 +26110,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _App = _interopRequireDefault(require("./App"));
+var _App = _interopRequireDefault(require("./components/App"));
 
 require("./index.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom.default.render(_react.default.createElement(_App.default, null), document.getElementById('root'));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./App":"App.js","./index.css":"index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/App":"components/App.js","./index.css":"index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -26140,7 +26144,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60309" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64499" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
