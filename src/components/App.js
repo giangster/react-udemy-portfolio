@@ -3,7 +3,7 @@ import Projects from './Projects';
 import Title from './Title'
 import SocialProfile from './SocialProfile';
 import koi from '../assets/koi.png';
-import Jokes from './Jokes';
+
 
 class App extends Component {
 
@@ -34,15 +34,14 @@ class App extends Component {
                     <button onClick={this.toggleDisplayBio}>Show less</button>
                 </div>) : (
                         <div>
-                            <h2>Joke of the day</h2>
                             <button onClick={this.toggleDisplayBio}>Read more</button>
                         </div>
                     )
                 }
                 <hr />
                 <Projects />
+                <hr />
                 <SocialProfile />
-                <Jokes />
             </div>
         )
     }
