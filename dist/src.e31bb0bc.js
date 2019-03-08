@@ -30959,21 +30959,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var PROJECTS = [{
   id: 1,
-  title: 'Porfolio Page',
-  description: 'My portfolio page',
-  link: 'https://github.com/thuygiang152/react-udemy-portfolio',
+  title: "Porfolio Page",
+  description: "My portfolio page",
+  link: "https://github.com/thuygiang152/react-udemy-portfolio",
   image: _project.default
 }, {
   id: 2,
-  title: 'Confusion Restaurant',
-  description: 'A web app for restaurant',
-  link: 'https://github.com/thuygiang152/react-coursera-confusion',
+  title: "Confusion Restaurant",
+  description: "A web app for restaurant",
+  link: "https://github.com/thuygiang152/react-coursera-confusion",
   image: _project.default
 }, {
   id: 3,
-  title: 'My lifestyle',
-  description: 'A glance at my Instagram page',
-  link: 'https://instagram.com/koinehehe',
+  title: "Exercism",
+  description: "My solutions for Javascript track",
+  link: "https://github.com/thuygiang152/exercism-javascript",
   image: _project.default
 }];
 var _default = PROJECTS;
@@ -31317,7 +31317,7 @@ function (_Component) {
         src: _koi.default,
         alt: "Koi",
         className: "profile"
-      }), _react.default.createElement("h1", null, "Hello!"), _react.default.createElement(_Title.default, null), _react.default.createElement("p", null, "My name is Giang, but you can call me Koi. And.. I'm a cat."), this.state.displayBio ? _react.default.createElement("div", null, _react.default.createElement("p", null, "I'm 25 years old (but many people tell me I don't look like one.. or ", _react.default.createElement("i", null, "behave"), " like one). Currently I'm living in Finland. I'm a student majoring in Business Information Technology at Haaga-Helia University of Applied Sciences. I'm learning React.js, JavaScript, CSS."), _react.default.createElement("p", null, "I think it's safe to say I'm responsible and willing to learn. I'm also a good combination of sweet and sarcastic. And I ", _react.default.createElement("b", null, "love"), " cute socks."), _react.default.createElement("p", null, "In my free time I like to cook, read books, watch \"lame series\" from Netflix (as my sister would call it, but I think they are awesome..) and sleep. Sorry I'm a cat. You know they love sleeping."), _react.default.createElement("button", {
+      }), _react.default.createElement("h1", null, "Hello!"), _react.default.createElement(_Title.default, null), _react.default.createElement("p", null, "My name is Giang, but you can call me Koi. And.. I'm a cat."), this.state.displayBio ? _react.default.createElement("div", null, _react.default.createElement("p", null, "I'm 25 years old (but many people tell me I don't look like one.. or ", _react.default.createElement("i", null, "behave"), " like one). Currently I'm living in Finland. I'm a student majoring in Business Information Technology at Haaga-Helia University of Applied Sciences. I'm learning React.js, JavaScript, CSS."), _react.default.createElement("p", null, "I think it's safe to say I'm responsible and willing to learn. I'm also a good combination of sweet and sarcastic. And I ", _react.default.createElement("b", null, "love"), " ", "cute socks."), _react.default.createElement("p", null, "In my free time I like to cook, read books, watch \"lame series\" from Netflix (as my sister would call it, but I think they are awesome..) and sleep. Sorry I'm a cat. You know they love sleeping."), _react.default.createElement("button", {
         onClick: this.toggleDisplayBio
       }, "Show less")) : _react.default.createElement("div", null, _react.default.createElement("button", {
         onClick: this.toggleDisplayBio
@@ -31446,7 +31446,40 @@ function (_Component) {
 
 var _default = Jokes;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"components/Header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header(props) {
+  var style = {
+    display: "inline-block",
+    margin: 10,
+    marginBottom: 30
+  };
+  return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("h3", {
+    style: style
+  }, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, "Home")), _react.default.createElement("h3", {
+    style: style
+  }, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/jokes"
+  }, "Joke"))), props.children);
+};
+
+var _default = Header;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/es/index.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -31533,6 +31566,8 @@ var _App = _interopRequireDefault(require("./components/App"));
 
 var _Jokes = _interopRequireDefault(require("./components/Jokes"));
 
+var _Header = _interopRequireDefault(require("./components/Header"));
+
 require("./index.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -31541,15 +31576,19 @@ var history = (0, _createBrowserHistory.default)();
 
 _reactDom.default.render(_react.default.createElement(_reactRouterDom.Router, {
   history: history
-}, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+}, _react.default.createElement(_reactRouterDom.Switch, null, "Second way", _react.default.createElement(_reactRouterDom.Route, {
   exact: true,
   path: "/",
-  component: _App.default
+  render: function render() {
+    return _react.default.createElement(_Header.default, null, _react.default.createElement(_App.default, null));
+  }
 }), _react.default.createElement(_reactRouterDom.Route, {
   path: "/jokes",
-  component: _Jokes.default
-}))), document.getElementById('root'));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/es/index.js","history/createBrowserHistory":"../node_modules/history/createBrowserHistory.js","./components/App":"components/App.js","./components/Jokes":"components/Jokes.js","./index.css":"index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  render: function render() {
+    return _react.default.createElement(_Header.default, null, _react.default.createElement(_Jokes.default, null));
+  }
+}))), document.getElementById("root"));
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/es/index.js","history/createBrowserHistory":"../node_modules/history/createBrowserHistory.js","./components/App":"components/App.js","./components/Jokes":"components/Jokes.js","./components/Header":"components/Header.js","./index.css":"index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -31576,7 +31615,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62089" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54948" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
