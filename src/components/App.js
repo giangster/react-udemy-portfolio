@@ -23,27 +23,21 @@ class App extends Component {
         <h1>Hello!</h1>
         <Title />
 
-        <p>My name is Giang, but you can call me Koi. And.. I'm a cat.</p>
+        <p>My name is Giang Nguyen.</p>
         {this.state.displayBio ? (
           <div>
             <p>
-              I'm 25 years old (but many people tell me I don't look like one..
-              or <i>behave</i> like one). Currently I'm living in Finland. I'm a
-              student majoring in Business Information Technology at Haaga-Helia
-              University of Applied Sciences. I'm learning React.js, JavaScript,
-              CSS.
+              I'm 25 years old. I'm a student majoring in Business Information
+              Technology at Haaga-Helia University of Applied Sciences.
             </p>
             <p>
-              I think it's safe to say I'm responsible and willing to learn. I'm
-              also a good combination of sweet and sarcastic. And I <b>love</b>{" "}
-              cute socks.
+              As a second year student in IT major, I understand the profound
+              impact of this specific aspect to the future of human as well as
+              its potential in upcoming years. I'm interested in frontend
+              development the most, but I'm also keen on server-side or even
+              full-stack as well.
             </p>
-            <p>
-              In my free time I like to cook, read books, watch "lame series"
-              from Netflix (as my sister would call it, but I think they are
-              awesome..) and sleep. Sorry I'm a cat. You know they love
-              sleeping.
-            </p>
+            <p>My hobbies include books, travelling, and cuisines.</p>
             <button onClick={this.toggleDisplayBio}>Show less</button>
           </div>
         ) : (

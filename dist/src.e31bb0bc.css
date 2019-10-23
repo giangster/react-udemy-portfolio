@@ -1,12 +1,12 @@
 @font-face {
   font-family: RobotoCondensed;
-  src: url(roboto-condensed.light.dc1ca484.ttf);
+  src: url(/roboto-condensed.light.dc1ca484.ttf);
   font-weight: 800;
 }
 
 @font-face {
   font-family: EcomonicaBold;
-  src: url(economica-bold.4b753017.ttf);
+  src: url(/economica-bold.4b753017.ttf);
 }
 
 body {
@@ -47,15 +47,16 @@ h5 {
   padding: 5px;
   opacity: 0.8;
 }
+
 @font-face {
     font-family: RobotoCondensed;
-    src: url(roboto-condensed.light.6709adf4.ttf);
+    src: url(/roboto-condensed.light.6709adf4.ttf);
     font-weight: 800;
 }
 
 @font-face {
     font-family: EcomonicaBold;
-    src: url(economica-bold.12a9e27d.ttf);
+    src: url(/economica-bold.12a9e27d.ttf);
 }
 
 body {
@@ -97,3 +98,5 @@ h1, h2, h3, h4, h5 {
     from {opacity: 0}
     to {opacity: 100}
 }
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */
